@@ -19,8 +19,9 @@ async function displayPopularMovies() {
 
   results.forEach((movie) => {
     const div = document.createElement("div");
-    div.classList.add("card");
+    div.classList.add("card");  
     div.innerHTML = `
+    
     <a href="movie-details.html?id=${movie.id}">
     ${
       movie.poster_path
@@ -36,6 +37,7 @@ async function displayPopularMovies() {
     />`
     }
     </a>
+
     <div class="card-body">
       <h5 class="card-title">${movie.title}</h5>
       <p class="card-text">
@@ -71,7 +73,7 @@ async function displayPopularShows() {
       }
       </a>
       <div class="card-body">
-        <h5 class="card-title">${show.title}</h5>
+        <h5 class="card-title">${show.name}</h5>
         <p class="card-text">
           <small class="text-muted">Air Date: ${show.first_air_date}</small>
         </p>
